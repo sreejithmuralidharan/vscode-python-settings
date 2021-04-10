@@ -1,18 +1,39 @@
 {
-    //Workspace Settings
+    //workbench Settings
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.editor": "json",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "vscode-icons",
 
+    //Editor Settings
+    "editor.autoIndent": "advanced",
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.formatOnSave": true,
+
     //Python settings
     "python.pythonPath": "/usr/local/bin/python3",
     "python.autoComplete.addBrackets": true,
+    "python.formatting.provider": "black",
+    
 
     //terminal settings
     "terminal.integrated.shell.osx": "/bin/bash",
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "underline"
+    "terminal.integrated.cursorStyle": "underline",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+
+    //extension settings
+    //code-runner
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName"      
+    },
+    "code-runner.showExecutionMessage": false,
+    "code-runner.clearPreviousOutput": true
     
 }
